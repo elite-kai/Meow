@@ -1,0 +1,58 @@
+//
+//  MeowHeader.pch
+//  Meow
+//
+//  Created by Parkin on 17/4/25.
+//  Copyright © 2017年 Parkin. All rights reserved.
+//
+
+//#ifdef DEBUG
+//
+//#define DESLog(FORMAT, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+//
+//#else
+//
+//#define DESLog(...)
+//
+//#endif
+
+#ifdef DEBUG
+
+#define DESLog(FORMAT, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+
+#else
+
+#define DESLog(format, ...)  do{}while(0)//release模式下,忽略
+
+#endif
+
+#ifndef MeowHeader_pch
+#define MeowHeader_pch
+
+    #import "MeowMacro.h"
+    #import "MeowConstant.h"
+    #import "NSArray+Log.h"
+    #import "NSDictionary+Log.h"
+    #import "UIView+Layout.h"
+    #import "UIScrollView+UITouch.h"
+    #import "UIImageView+WebCache.m"
+    #import "MeowTabBarController.h"
+    #import "UINavigationBar+Awesome.h"
+    #import "YZDisplayViewController.h"
+    #import "UITableView+FDTemplateLayoutCell.h"
+    #import "Masonry.h"
+    #import "MJRefresh.h"
+    #import "JZNavigationExtension.h"
+    #import "MeowBaseVMClass.h"
+    #import "LXNetworking.h"
+    #import "MJExtension.h"
+    #import "ReactiveObjC.h"
+
+    #import "MeowPlayScrollV.h"
+    #import <RongIMLib/RongIMLib.h>
+
+
+    #import "MeowAppDelegate.h"
+
+
+#endif /* MeowHeader_pch */

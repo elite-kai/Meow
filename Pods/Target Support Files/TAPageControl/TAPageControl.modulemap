@@ -1,0 +1,6 @@
+framework module TAPageControl {
+  umbrella header "TAPageControl-umbrella.h"
+
+  export *
+  module * { export * }
+}

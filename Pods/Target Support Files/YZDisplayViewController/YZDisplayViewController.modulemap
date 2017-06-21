@@ -1,0 +1,6 @@
+framework module YZDisplayViewController {
+  umbrella header "YZDisplayViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}
